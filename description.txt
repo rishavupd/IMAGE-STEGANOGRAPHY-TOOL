@@ -1,0 +1,23 @@
+A CLI based steganography tool, that has functionality of inserting text messages in jpg and jpeg image.
+This program uses the two bit of LSB of the R channel of each pixel of selected image to hide the binary encoded
+message, provided by users.
+
+This program is designed to run in terminal of linux machine. Other os may not support the file handling
+process that is used in the program.
+
+Inorder to share image that contains message to other over internet, use the platform that does not compress the image. Else the compression may lead to corrupt message or no message at all.
+
+Using hideEm
+- python main.py  :main.py is the index file for the program.
+- Selecting file process automatically detects the selected file type and accepts only jpg or jpeg file and changes directory if dir is selected.
+- [END] is used as escape sequence that detects the end of message. So, don't type [END] in message.
+- Once the message is hidden into image, you will be redirected to main menu and image saved directory will be shown. (~/)
+- Once the message is extracted from the image, the message is displayed in the terminal and asks for input.
+- w! -> to write the text to a file in ~/ dir and go to menu
+- q! -> exit without saving the file
+
+Library used from Python
+- PIL
+- OS
+- time
+
